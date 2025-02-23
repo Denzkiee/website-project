@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div >
+       
+          <header class="Header"> <h1 class="headertitle">FUNCTIONS FOR JAVASCRIPT </h1>
+            <div class="sidebar" id="sidebar">
+              <button class="closebtn" onclick="closeNav()">×</button>
+              <a href="#">Home</a>
+              <a href="#">About</a>
+              <a href="#">Services</a>
+              <a href="#">Contact</a>
+            </div>
+          
+            <div id="main">
+              <button class="openbtn" onclick="openNav()">☰ Select Lesson</button>
+              <br>
+              <br>
+              
+              
+             
+            </div>
+          </header>
+
+          
+    </div>
+    <div id="deadspace"></div>
+
+   <div class="text">
+    <h1>HEADER FOR TOPICCCC</h1>
+    <p>PARAGRAPHS CONTENTSSS</p>
+
+    <h1>HEADER FOR TOPICCCC</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam, illum nulla repellendus, et sunt iusto eum molestias illo perferendis delectus quisquam suscipit hic libero ea ab corporis temporibus voluptatem nobis.</p>
+
+   </div>
+
+   <div class="img">
+   <pre><code>let a = 1
+    let b = 2
+    
+    return checker()
+    
+    function checker(){
+        if (a < b)
+            alert ("true")
+    
+        else
+        alert ("False")
+      
+        
+    }
+  </code></pre></div>
+
+
+
+
+
+
+
+    <style>
+        body{
+            background-color: rgba(15, 35, 40, 0.413);
+            height: 200%;
+   
+            
+
+        }
+
+        .text{
+            position: absolute;
+            display: block;
+            z-index: 0;
+            width: 50%;
+            height: 500px;
+            
+
+          
+        }
+
+        .img{
+            font-family: "Courier New", Courier, monospace;
+            width: 40%;
+            height: 500px;
+            display: block;
+            float: right;
+            padding: 10px ;
+            border: 2px solid;
+            background-color: #818181;
+
+            
+        }
+        code {
+            font-family: "Courier New", Courier, monospace;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+
+        pre {
+            font-family: "Courier New", Courier, monospace;
+            background-color: #2e2e2e;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto; 
+        }
+
+        .Header{
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100px;
+            width: 100%;
+            background-color: rgb(37, 81, 81);
+            border: 10px solid #111;
+            z-index: 1;
+            display: block;
+            justify-content: center;   
+            text-align: center;
+            
+           
+            
+        }
+        #deadspace{
+          position: static;
+            left: 0;
+            top: 0;
+            height: 120px;
+            width: 100%;
+
+        }
+        .headertitle{
+          color: #f1f1f1;
+        }
+
+        .sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  left: 50px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+  
+  
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  border: none;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  height: 100px;
+  z-index: 1;
+  
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+
+
+    </style>
+
+
+
+
+
+
+
+
+
+
+    <script>
+        function openNav() {
+  document.getElementById("sidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("sidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+}
+    </script>
+</body>
+</html>
+

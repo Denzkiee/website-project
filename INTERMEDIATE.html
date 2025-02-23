@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div >
+       
+          <header class="Header"> <h1 class="headertitle">INTERMEDIATE JAVASCRIPT </h1>
+            <div class="sidebar" id="sidebar">
+              <button class="closebtn" onclick="closeNav()">×</button>
+              <a href="INTRODUCTION.HTML">INTRODUCTION TO JAVASCRIPT</a>
+              <a href="ESSENTIAL.HTML">JAVASCIPT ESSENTIALS</a>
+              <a href="LOGICAL.HTML">LOGICAL STATEMENTS</a>
+              <a href="LOOPSARRAY.HTML">LOOPS AND ARRAYS</a>
+              <a href="FUNCTIONSJAVA.html">JAVASCRIPT FUNCTIONS</a>
+              <a href="METHODS.HTML">BUILT IN METHODS</a>
+              <a href="DOM.HTML">DOCUMENT OBJECT MODEL</a>
+              <a href="EVENTLISTENER.HTML">INTERACTIVE CONTENT AND EVENT LISTENERS</a>
+              <a href="INTERMEDIATE.HTML">INTERMEDIATE JAVASCIPT</a>
+             FUNCTIONSJAVA.html
+            </div>
+          
+            <div id="main">
+              <button class="openbtn" onclick="openNav()">☰ Select Lesson</button>
+              <br>
+              <br>
+              
+              
+             
+            </div>
+          </header>
+
+          
+    </div>
+    <div id="deadspace"></div>
+
+   <div class="text">
+   
+  <button onclick="run()" id="run">RUN</button>
+</div>
+
+
+
+
+
+
+
+    <style>
+        body{
+            background-color:#a8d5ff;
+            height: 200%;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   
+            
+
+        }
+
+        .text{
+         
+            position: absolute;
+            display: block;
+            z-index: 0;
+            width: 50%;
+            height: auto  ;
+           line-height: 20px;   
+        }
+
+       
+
+        .Header{
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100px;
+            width: 100%;
+            background-color: #274472;
+            border: 10px solid #111;
+            z-index: 2;
+            display: block;
+            justify-content: center;   
+            text-align: center;
+            min-width: 200px;
+            
+           
+            
+        }
+        #deadspace{
+          position: static;
+            left: 0;
+            top: 0;
+            height: 120px;
+            width: 100%;
+
+        }
+        .headertitle{
+          position: absolute;
+          left: 36%;
+          top: 10px ;
+          color: #f1f1f1;
+          width: fit-content;
+          
+        }
+
+        .sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  left: 50px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+  
+  
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  border: none;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  height: 100px;
+  z-index: 1;
+  
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+::-webkit-scrollbar {
+  width: 12px;  /* width of the scrollbar */
+  height: 12px; /* height of the scrollbar (horizontal scrollbar) */
+}
+
+/* The track (the part the thumb slides within) */
+::-webkit-scrollbar-track {
+  background: #000000;  /* light gray background */
+  border-radius: 10px;
+}
+
+/* The draggable part of the scrollbar */
+::-webkit-scrollbar-thumb {
+  background: #888;  /* color of the thumb */
+  border-radius: 10px;
+  height: 10px;
+}
+
+/* The thumb when you hover over it */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;  /* darker color when hovered */
+}
+
+/* Optional: Add styles for scrollbar corners */
+::-webkit-scrollbar-corner {
+  background: #f1f1f1;
+}
+
+
+    </style>
+
+
+
+
+
+
+
+
+
+
+    <script>
+        function openNav() {
+  document.getElementById("sidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("sidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+}
+
+function run(){
+  alert("False")
+}
+    </script>
+</body>
+</html>
+

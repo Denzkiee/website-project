@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="header">
+        <h1 id="cpprog3">CPPROG3</h1>
+         <button class="headerbtn">
+            ABOUT
+        </button>
+        <button  class="headerbtn">
+            SHARE
+        </button>
+</div>
+
+
+
+
+    <div id="Form">
+        <div id="title">
+        <h1>PROJECT IN WEB DEVELOPMENT</h1>
+        <h5>Created By: Dieta & Elleran</h5>
+    </div>
+
+    <div id="textwelcome">
+    <h1 >Welcome to our website</h1>
+    <h3>Are you interested in Web development? Join us as we explore the basics and techniques in creating a user-friendly website.</h3>
+
+    <button onclick="button()"  id="enterbtn">"I'm in"</button>
+
+</div>
+
+    </div>
+
+   
+
+
+
+
+
+
+
+
+
+
+<style>
+#header{
+    padding: 20px;
+    border: 10px;
+    border-width: 10px;
+    background: rgb(29 70 156 / 43%);
+    backdrop-filter: blur(10px);
+    word-spacing: 40px;
+    text-decoration: aliceblue;
+   
+    
+}
+body{
+background-image: url(gradientBg.gif);
+background-position: center center;
+background-size: cover;
+background-attachment: fixed;
+}
+#title{
+    border: 1px solid;
+    border-radius: 50px;
+    padding: 20px;
+    position: relative;
+    bottom: 200px;
+    background: rgb(70 110 176) ;
+    backdrop-filter: blur(10px);
+    color: rgb(0, 0, 0);
+}
+#title:hover{
+    background-image: linear-gradient(to right, #2e456d, #3843b6, #2d5fdf)
+}
+
+
+#Form{
+    border: 1px solid;
+    padding: 100px;
+    border-radius: 10px;
+    width: fit-content;
+    background: rgba(255, 255, 255, 0.163) ;
+    backdrop-filter: blur(100px);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: absolute;
+    left: 50vh;
+    top: 200px;
+    width: 600px;
+    height: 200px;
+}
+#Form:hover{
+    background-image: radial-gradient(circle, #427eb9, #0c0c68);
+    box-shadow:  0 0 10px #0a0157bb, 0 0 20px #021582, 0 0 30px #00aeff;
+    
+    
+}
+
+
+#textwelcome{
+    font-size: larger;
+    position: absolute;
+    bottom: 50px;
+    right: 10px;    
+    line-height: 2;
+}
+
+#enterbtn{
+    font-size: larger;
+    border-radius: 20px;
+    padding: 5px;
+    background: none;
+    width: 100px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(20, 20, 72);
+    transition: all 0.3;
+}
+#enterbtn:hover{
+    background-color: rgb(26, 69, 226);
+    transform: scale(1.1);
+    box-shadow:  0 0 10px #0a0157bb, 0 0 20px #021582, 0 0 30px #00aeff;
+
+    
+    
+
+}
+
+
+.headerbtn{
+    font-size: larger;
+    border-radius: 20px;
+    padding: 5px;
+    background: none;
+    width: 100px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(10, 10, 63);
+}
+.headerbtn:hover{
+    background-color: rgb(26, 69, 226);
+    transform: scale(1.1);
+}
+#cpprog3{
+    position: absolute;
+    left: 180vh;
+    top : -4px;
+    color: rgb(255, 255, 255);
+}
+
+
+
+
+</style>
+
+<script>
+    function button() {
+        window.location.href = "INTRODUCTION.html";
+    }
+</script>
+</body>
+</html>

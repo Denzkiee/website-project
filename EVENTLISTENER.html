@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body{
+          background-color:#a8d5ff;
+          height: 200%;
+          font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      }
+
+      .text{
+          display: flex;
+          font-size: 20px;
+          margin: 0;
+          transform-origin: top left;
+          align-content: stretch;
+          align-items: center;
+          flex-direction: column;
+          justify-content: center;
+          z-index: 0;
+          height: auto;
+          line-height: 50px;
+          text-align: center;
+      }
+
+      p{
+          width: 720px;
+          text-align: justify;
+      }
+
+      .img{
+          font-family: "Courier New", Courier, monospace;
+          width: 40%;
+          height: 500px;
+          float: right;
+          padding: 10px ;
+          border: 2px solid;
+          background-color:#41729F;
+          position: relative;
+          align-items: center;
+      }
+
+      #run{
+          height: 100px;
+          width: 150px;
+          position: absolute;
+          left: 40%;
+          bottom: 10%;
+          border: 3px black solid;
+          color: rgb(255, 255, 255);
+          background-color: black;
+          border-radius: 50px;
+          padding: 20px;
+          transition: all 0.3s ease;
+          z-index: 1;
+      }
+      #run:hover{
+          background-color: #C3E0E5;
+          color: #000000;
+          transform: scale(1.1)
+      }
+
+      code {
+          font-family: "Courier New", Courier, monospace;
+          padding: 2px 4px;
+          border-radius: 4px;
+      }
+
+      pre {
+          font-family: "Courier New", Courier, monospace;
+          background-color: #2e2e2e;
+          color: white;
+          padding: 10px;
+          border-radius: 5px;
+          overflow-x: auto; 
+          overflow-y: auto; 
+          width: 600px;
+      }
+
+      .Header{
+          position: fixed;
+          left: 0;
+          top: 0;
+          height: 100px;
+          width: 100%;
+          background-color: #274472;
+          border: 10px solid #111;
+          z-index: 2;
+          display: block;
+          justify-content: center;   
+          text-align: center;
+          min-width: 200px;
+      }
+
+      .section {
+          margin-bottom: 30px;
+      }
+
+      .example-button {
+          padding: 10px 20px;
+          background-color: #4CAF50;
+          color: white;
+          border: none;
+          cursor: pointer;
+      }
+      .example-button:hover {
+          background-color: #45a049;
+      }
+
+      #deadspace{
+          position: static;
+          left: 0;
+          top: 0;
+          height: 120px;
+          width: 100%;
+      }
+
+      .headertitle{
+          position: absolute;
+          left: 36%;
+          top: 10px ;
+          color: #f1f1f1;
+          width: fit-content;
+      }
+
+      .sidebar {
+          height: 100%;
+          width: 0;
+          position: fixed;
+          z-index: 2;
+          top: 0;
+          left: 0;
+          background-color: #111;
+          overflow-x: hidden;
+          transition: 0.5s;
+          padding-top: 60px;
+      }
+
+      .sidebar a {
+          padding: 8px 8px 8px 32px;
+          text-decoration: none;
+          font-size: 25px;
+          color: #818181;
+          display: block;
+          transition: 0.3s;
+      }
+
+      .sidebar a:hover {
+          color: #f1f1f1;
+      }
+
+      .sidebar .closebtn {
+          position: absolute;
+          top: 0;
+          left: 50px;
+          font-size: 36px;
+          margin-left: 50px;
+      }
+
+      #main {
+          transition: margin-left .5s;
+          padding: 16px;
+      }
+
+      .openbtn {
+          font-size: 20px;
+          cursor: pointer;
+          background-color: #111;
+          color: white;
+          border: none;
+          position: fixed;
+          top: 10px;
+          left: 10px;
+          height: 100px;
+          z-index: 1;
+      }
+
+      .openbtn:hover {
+          background-color: #444;
+      }
+
+      ::-webkit-scrollbar {
+          width: 12px;
+          height: 12px;
+      }
+
+      ::-webkit-scrollbar-track {
+          background: #000000;
+          border-radius: 10px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+          background: #888;
+          border-radius: 10px;
+          height: 10px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+          background: #555;
+      }
+
+      ::-webkit-scrollbar-corner {
+          background: #f1f1f1;
+      }
+
+  </style>
+</head>
+<body>
+    <div>
+        <header class="Header">
+            <h1 class="headertitle">INTERACTIVE CONTENT AND EVENT LISTENER</h1>
+            <div class="sidebar" id="sidebar">
+                <button class="closebtn" onclick="closeNav()">×</button>
+                <a href="INTRODUCTION.HTML">INTRODUCTION TO JAVASCRIPT</a>
+                <a href="ESSENTIAL.HTML">JAVASCRIPT ESSENTIALS</a>
+                <a href="LOGICAL.HTML">LOGICAL STATEMENTS</a>
+                <a href="LOOPSARRAY.HTML">LOOPS AND ARRAYS</a>
+                <a href="FUNCTIONSJAVA.html">JAVASCRIPT FUNCTIONS</a>
+                <a href="METHODS.HTML">BUILT IN METHODS</a>
+                <a href="DOM.HTML">DOCUMENT OBJECT MODEL</a>
+                <a href="EVENTLISTENER.HTML">INTERACTIVE CONTENT AND EVENT LISTENERS</a>
+                <a href="INTERMEDIATE.HTML">INTERMEDIATE JAVASCRIPT</a>
+            </div>
+            <div id="main">
+                <button class="openbtn" onclick="openNav()">☰ Select Lesson</button>
+                <br><br>
+            </div>
+        </header>
+    </div>
+    <div id="deadspace"></div>
+    <div class="text">
+        <h1>JavaScript Event Listener Lesson</h1>
+        <!-- Add your sections here as required -->
+        <div class="section">
+            <h2>What is an Event Listener?</h2>
+            <p>An event listener in JavaScript is a method that waits for an event (like a click, keypress, or mouse movement) to occur on an HTML element. When the specified event occurs, the event listener calls a function to handle the event.</p>
+        </div>
+
+        <div class="section">
+            <h2>Basic Syntax of Event Listeners</h2>
+            <p>The basic syntax for using an event listener is:</p>
+            <pre>element.addEventListener('event', function, useCapture);</pre>
+        </div>
+
+        <!-- Example 1 -->
+        <div class="section">
+            <h2>Example 1: Handling a Click Event</h2>
+            <button id="clickButton" class="example-button">Click Me</button>
+            <pre>
+let button = document.getElementById('clickButton');
+button.addEventListener('click', function() {
+    alert('Button was clicked!');
+});
+            </pre>
+        </div>
+
+        <!-- Example 2 -->
+        <div class="section">
+            <h2>Example 2: Handling a Mouseover Event</h2>
+            <div id="hoverDiv" style="width: 200px; height: 100px; background-color: lightblue;">Hover over me!</div>
+            <pre>
+let hoverDiv = document.getElementById('hoverDiv');
+hoverDiv.addEventListener('mouseover', function() {
+    hoverDiv.style.backgroundColor = 'orange';
+});
+            </pre>
+        </div>
+
+        <!-- Example 3 -->
+        <div class="section">
+            <h2>Example 3: Handling a Keydown Event</h2>
+            <input type="text" id="inputField" placeholder="Press any key">
+            <pre>
+let inputField = document.getElementById('inputField');
+inputField.addEventListener('keydown', function(event) {
+    console.log('Key pressed: ' + event.key);
+});
+            </pre>
+        </div>
+    </div>
+
+    <script>
+        // Sidebar functions
+        function openNav() {
+            document.getElementById("sidebar").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("sidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+
+        // Event listeners example code
+        document.getElementById('clickButton').addEventListener('click', function() {
+            alert('Button was clicked!');
+        });
+
+        document.getElementById('hoverDiv').addEventListener('mouseover', function() {
+            document.getElementById('hoverDiv').style.backgroundColor = 'orange';
+        });
+
+        document.getElementById('inputField').addEventListener('keydown', function(event) {
+            console.log('Key pressed: ' + event.key);
+        });
+    </script>
+</body>
+</html>

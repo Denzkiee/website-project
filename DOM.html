@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div >
+       
+          <header class="Header"> <h1 class="headertitle">Document Object Model</h1>
+            <div class="sidebar" id="sidebar">
+              <button class="closebtn" onclick="closeNav()">×</button>
+              <a href="INTRODUCTION.HTML">INTRODUCTION TO JAVASCRIPT</a>
+              <a href="ESSENTIAL.HTML">JAVASCIPT ESSENTIALS</a>
+              <a href="LOGICAL.HTML">LOGICAL STATEMENTS</a>
+              <a href="LOOPSARRAY.HTML">LOOPS AND ARRAYS</a>
+              <a href="FUNCTIONSJAVA.html">JAVASCRIPT FUNCTIONS</a>
+              <a href="METHODS.HTML">BUILT IN METHODS</a>
+              <a href="DOM.HTML">DOCUMENT OBJECT MODEL</a>
+              <a href="EVENTLISTENER.HTML">INTERACTIVE CONTENT AND EVENT LISTENERS</a>
+              <a href="INTERMEDIATE.HTML">INTERMEDIATE JAVASCIPT</a>
+             FUNCTIONSJAVA.html
+            </div>
+          
+            <div id="main">
+              <button class="openbtn" onclick="openNav()">☰ Select Lesson</button>
+              <br>
+              <br>
+              
+              
+             
+            </div>
+          </header>
+
+          
+    </div>
+    <div id="deadspace"></div>
+
+   <div class="text">
+    <h1>DOM (Document Object Model) Lesson</h1>
+
+    <div class="section">
+        <h2>What is the DOM?</h2>
+        <p>The Document Object Model (DOM) represents the structure of an HTML document as a tree of objects. It allows you to interact with and manipulate HTML elements using JavaScript. The DOM provides an interface for your code to access and update content, structure, and style of a webpage dynamically.</p>
+    </div>
+
+    <div class="section">
+        <h2>DOM Structure</h2>
+        <p>The DOM is structured as a tree, where each element, attribute, and piece of text is an object. The root of the tree is the <code>document</code> object. Every element in the HTML page is a node in this tree.</p>
+        <p>For example, if we have this HTML code:</p>
+        <pre>
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;My Page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello, World!&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+        <p>The DOM structure would look like this:</p>
+        <pre>
+document
+ └── html
+      ├── head
+      │    └── title
+      │         └── "My Page"
+      └── body
+           └── h1
+                └── "Hello, World!"
+        </pre>
+    </div>
+
+    <div class="section">
+        <h2>Interacting with the DOM Using JavaScript</h2>
+        <p>JavaScript provides several methods to interact with the DOM. The most common ones are:</p>
+        
+        <h3>1. Selecting Elements</h3>
+        <p>You can select elements using the following methods:</p>
+        
+        <ul>
+            <li><strong><code>getElementById(id)</code></strong>: Selects an element by its ID.</li>
+            <li><strong><code>getElementsByClassName(class)</code></strong>: Selects elements by their class name.</li>
+            <li><strong><code>getElementsByTagName(tag)</code></strong>: Selects elements by their tag name.</li>
+            <li><strong><code>querySelector(selector)</code></strong>: Selects the first element that matches a CSS selector.</li>
+            <li><strong><code>querySelectorAll(selector)</code></strong>: Selects all elements that match a CSS selector.</li>
+        </ul>
+        
+        <h3>Example: Using <code>getElementById()</code></h3>
+        <p>To select an element by its ID:</p>
+        <pre>
+let element = document.getElementById('myElement');
+element.style.color = 'blue';  // Change the color of the element to blue
+        </pre>
+
+        <h3>2. Changing the Content of an Element</h3>
+        <p>You can change the content of an element using:</p>
+        <ul>
+            <li><strong><code>innerHTML</code></strong>: Modifies the HTML content of an element.</li>
+            <li><strong><code>textContent</code></strong>: Modifies the text content of an element.</li>
+        </ul>
+        
+        <h3>Example: Changing Text Content</h3>
+        <pre>
+let element = document.getElementById('myElement');
+element.textContent = 'New Text Content!';  // Change the text inside the element
+        </pre>
+
+        <h3>3. Changing Styles</h3>
+        <p>You can change the styles of an element using the <code>style</code> property:</p>
+        <pre>
+let element = document.getElementById('myElement');
+element.style.backgroundColor = 'yellow';  // Change the background color of the element
+        </pre>
+
+        <h3>4. Adding and Removing Elements</h3>
+        <p>You can create new elements and add them to the DOM:</p>
+        <pre>
+let newElement = document.createElement('div');  // Create a new div element
+newElement.textContent = 'This is a new element';
+document.body.appendChild(newElement);  // Add the new element to the body
+        </pre>
+        <p>To remove an element:</p>
+        <pre>
+let element = document.getElementById('myElement');
+element.remove();  // Remove the element from the DOM
+        </pre>
+    </div>
+
+    <div class="section">
+        <h2>Event Handling</h2>
+        <p>In addition to modifying elements, you can interact with them by responding to events like clicks, mouse movements, and keyboard input.</p>
+        
+        <h3>1. Adding Event Listeners</h3>
+        <p>You can add event listeners to elements using the <code>addEventListener()</code> method:</p>
+        <pre>
+let button = document.getElementById('myButton');
+button.addEventListener('click', function() {
+    alert('Button clicked!');
+});
+        </pre>
+        <p>When the button is clicked, an alert will be shown with the message "Button clicked!"</p>
+
+        <h3>2. Removing Event Listeners</h3>
+        <p>You can remove event listeners using the <code>removeEventListener()</code> method:</p>
+        <pre>
+let button = document.getElementById('myButton');
+function handleClick() {
+    alert('Button clicked!');
+}
+button.addEventListener('click', handleClick);
+// To remove the event listener:
+button.removeEventListener('click', handleClick);
+        </pre>
+    </div>
+
+    <div class="section">
+        <h2>Conclusion</h2>
+        <p>The DOM is a powerful feature of JavaScript that allows you to access and manipulate HTML elements dynamically. By understanding the DOM, you can create interactive web pages that respond to user actions, modify content, and dynamically change the appearance of elements.</p>
+        <p>Remember, using the DOM methods like <code>getElementById()</code>, <code>querySelector()</code>, and <code>addEventListener()</code> will help you efficiently manage and interact with your HTML content.</p>  
+  
+  </div>
+    <style>
+   
+        body{
+            background-color:#a8d5ff;
+            height: 200%;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            
+   
+            
+
+        }
+
+        .text{
+            display: flex;
+           font-size: 20px;
+            margin: 0;
+            transform-origin: top left;
+            align-content: stretch;
+    align-items: center;
+    flex-direction: column;
+            justify-content: center;
+            z-index: 0;
+            height: auto  ;
+           line-height: 50px;
+           text-align: justify;
+        }
+        p{
+          width: 720px;
+          text-align: justify;
+        }
+  
+        .img{
+            font-family: "Courier New", Courier, monospace;
+            width: 40%;
+            height: 500px;
+            float: right;
+            padding: 10px ;
+            border: 2px solid;
+            background-color:#41729F;
+            position: relative;   
+            align-items: center;
+        }
+
+        #run{
+    height: 100px;
+    width: 150px;
+    position: absolute;
+    left: 40%;
+    bottom: 10%;
+    border: 3px black solid;
+    color: rgb(255, 255, 255);
+    background-color: black;
+    border-radius: 50px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    z-index: 1;
+
+}
+    #run:hover{
+         background-color: #C3E0E5;
+         color: #000000;;
+         transform: scale(1.1)
+         
+
+}
+        code {
+            font-family: "Courier New", Courier, monospace;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+
+        pre {
+            font-family: "Courier New", Courier, monospace;
+            background-color: #2e2e2e;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto; 
+            overflow-y: auto; 
+            width: 600px;
+        }
+
+        .Header{
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100px;
+            width: 100%;
+            background-color: #274472;
+            border: 10px solid #111;
+            z-index: 2;
+            display: block;
+            justify-content: center;   
+            text-align: center;
+            min-width: 200px;
+            
+           
+            
+        }
+        #deadspace{
+          position: static;
+            left: 0;
+            top: 0;
+            height: 120px;
+            width: 100%;
+
+        }
+        .headertitle{
+          position: absolute;
+          left: 36%;
+          top: 10px ;
+          color: #f1f1f1;
+          width: fit-content;
+          
+        }
+
+        .sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  left: 50px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+  
+  
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  border: none;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  height: 100px;
+  z-index: 1;
+  
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+::-webkit-scrollbar {
+  width: 12px;  /* width of the scrollbar */
+  height: 12px; /* height of the scrollbar (horizontal scrollbar) */
+}
+
+/* The track (the part the thumb slides within) */
+::-webkit-scrollbar-track {
+  background: #000000;  /* light gray background */
+  border-radius: 10px;
+}
+
+/* The draggable part of the scrollbar */
+::-webkit-scrollbar-thumb {
+  background: #888;  /* color of the thumb */
+  border-radius: 10px;
+  height: 10px;
+}
+
+/* The thumb when you hover over it */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;  /* darker color when hovered */
+}
+
+/* Optional: Add styles for scrollbar corners */
+::-webkit-scrollbar-corner {
+  background: #f1f1f1;
+}
+
+
+    </style>
+
+
+
+
+
+
+
+
+
+
+    <script>
+        function openNav() {
+  document.getElementById("sidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("sidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+}
+
+function run(){
+  alert("False")
+}
+    </script>
+</body>
+</html>
+

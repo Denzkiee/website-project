@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div >
+       
+          <header class="Header"> <h1 class="headertitle">FUNCTIONS FOR JAVASCRIPT </h1>
+            <div class="sidebar" id="sidebar">
+              <button class="closebtn" onclick="closeNav()">×</button>
+              <a href="INTRODUCTION.HTML">INTRODUCTION TO JAVASCRIPT</a>
+              <a href="ESSENTIAL.HTML">JAVASCIPT ESSENTIALS</a>
+              <a href="LOGICAL.HTML">LOGICAL STATEMENTS</a>
+              <a href="LOOPSARRAY.HTML">LOOPS AND ARRAYS</a>
+              <a href="FUNCTIONSJAVA.html">JAVASCRIPT FUNCTIONS</a>
+              <a href="METHODS.HTML">BUILT IN METHODS</a>
+              <a href="DOM.HTML">DOCUMENT OBJECT MODEL</a>
+              <a href="EVENTLISTENER.HTML">INTERACTIVE CONTENT AND EVENT LISTENERS</a>
+              <a href="INTERMEDIATE.HTML">INTERMEDIATE JAVASCIPT</a>
+             FUNCTIONSJAVA.html
+            </div>
+          
+            <div id="main">
+              <button class="openbtn" onclick="openNav()">☰ Select Lesson</button>
+              <br>
+              <br>
+              
+              
+             
+            </div>
+          </header>
+
+          
+    </div>
+    <div id="deadspace"></div>
+
+   <div class="text">
+    <h1> Loops in JavaScript</h1>
+<p>A loop allows you to repeat a block of code multiple times, which is useful when you need to perform repetitive tasks (like iterating over elements in an array, processing a set of numbers, etc.).</p>
+<h1>Types of Loops</h1>
+<br><br>
+<h2>a. For Loop</h2>
+<p>A for loop is used when you know how many times you want the loop to run.</p>
+<h2>Syntax:</h2>
+<pre><code>
+  for (initialization; condition; increment/decrement) {
+  // Code to run on each iteration
+}
+</code></pre>
+<li>Initialization: Initializes the counter (usually a variable).</li>
+<li>Condition: The condition that must be true for the loop to keep running.</li>
+<li>Increment/Decrement: This updates the counter (e.g., increase by 1 each time).</li>
+<br>
+
+
+<h2>Example:</h2>
+<pre><code>
+  for (let i = 0; i < 5; i++) {
+  console.log("Iteration " + i);
+}
+</code></pre>
+<h2>Output:</h2>
+<pre><code>
+  Iteration 0
+  Iteration 1
+  Iteration 2
+  Iteration 3
+  Iteration 4
+  </code></pre>
+<br>
+<br> 
+
+<h1>While Loop</h1>
+<p>A while loop will execute a block of code as long as a specified condition is true. 
+  The difference from the for loop is that the while loop doesn't require you to specify initialization and update in one line </p>
+<pre><code>
+  let i = 0;
+  while (i < 5) {
+      console.log(i);
+      i++;  // increment the loop variable
+  }  
+  </code></pre>
+  <h2>OUTPUT:</h2>
+  <pre><code>
+    0
+    1
+    2
+    3
+    4
+    </code></pre>
+<br><br>
+<h1>Do while Loop</h1>
+<p>A dowhile loop works similarly to the while loop, but it guarantees that the code
+   will run at least once because the condition is checked after the first iteration.</p>
+   <h2>Syntax:</h2>
+   <pre><code>
+  do {
+      // Code to be executed
+  } while (condition);
+  
+   </code></pre>
+
+   <h2>Example:</h2>
+   <pre><code>
+let i = 0;
+do {
+    console.log(i);
+    i++;
+} while (i < 5);
+
+   </code></pre>
+   <h2>Output:</h2>
+   <pre><code>
+0
+1
+2
+3
+4
+5
+   </pre></code>
+<br><br>
+<h1>What is an Array?</h1>
+<p>An array is a special variable that can hold multiple values at once. Instead of declaring individual variables for each value, you can store multiple values in a single variable using an array.
+
+  Arrays are ordered collections of values, which can be of any type (numbers, strings, booleans, objects, etc.). In JavaScript, arrays are zero-indexed, meaning the first item in an array is accessed at index 0.</p>
+   </code></pre>
+
+   <h1>Creating an Array</h1>
+   <p> You can create an array in JavaScript using square brackets []. You can either define the array with predefined values or initialize it as an empty array.</p>
+   <h2>Example</h2>
+   <pre><code>
+    // An array with numbers
+let numbers = [1, 2, 3, 4, 5];
+
+// An array with strings
+let fruits = ["apple", "banana", "cherry"];
+
+// An empty array
+let emptyArray = [];
+<br><br>
+   </code></pre>
+<h1>Accessing Elements in an Array</h1>
+<p>You can access elements in an array using their index. Remember, the index starts from 0.</p>
+<h2>Example:</h2>
+<pre><code>
+  let fruits = ["apple", "banana", "cherry"];
+
+  console.log(fruits[0]);  // Output: "apple"
+  console.log(fruits[1]);  // Output: "banana"
+  console.log(fruits[2]);  // Output: "cherry"
+  </code></pre> <br> <br>
+
+
+  <h1>Modifying Array Elements</h1>
+  <p>You can modify an array element by assigning a new value to an existing index.</p>
+  <pre><code>
+    let fruits = ["apple", "banana", "cherry"];
+
+    fruits[1] = "blueberry";  // Changing "banana" to "blueberry"
+    
+    console.log(fruits);  // Output: ["apple", "blueberry", "cherry"]
+    </code></pre>
+<br><br>
+
+<h1>Array Length</h1>
+<p>To get the number of elements in an array, use the .length property. This will return the total count of elements in the array.</p>
+
+<pre><code>
+  let fruits = ["apple", "banana", "cherry"];
+
+  console.log(fruits.length);  // Output: 3
+  </code></pre> <br> <br>
+
+  <h1> Other Useful Array Methods</h1>
+  <p>JavaScript provides many built-in methods for manipulating arrays. Here are some common ones:map()</p>
+  <p>The map() method creates a new array by applying a function to each element of the original array.</p>
+
+  <pre><code>
+    let numbers = [1, 2, 3];
+    let doubled = numbers.map(function(number) {
+        return number * 2;
+    });
+    
+    console.log(doubled);  // Output: [2, 4, 6]
+    </code></pre>
+    <br><br>
+
+
+
+  </div>
+    <style>
+   
+        body{
+            background-color:#a8d5ff;
+            height: 200%;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            
+   
+            
+
+        }
+
+        .text{
+            display: flex;
+           font-size: 1.5vw;
+            margin: 0;
+            transform-origin: top left;
+            align-content: stretch;
+    align-items: center;
+    flex-direction: column;
+            justify-content: center;
+            z-index: 0;
+            height: auto  ;
+           line-height: 50px;
+           text-align: justify;
+        }
+        p{
+          width: 600px;
+          text-align: justify;
+        }
+       
+
+        .img{
+            font-family: "Courier New", Courier, monospace;
+            width: 40%;
+            height: 500px;
+            float: right;
+            padding: 10px ;
+            border: 2px solid;
+            background-color:#41729F;
+            position: relative;   
+            align-items: center;
+        }
+
+        #run{
+    height: 100px;
+    width: 150px;
+    position: absolute;
+    left: 40%;
+    bottom: 10%;
+    border: 3px black solid;
+    color: rgb(255, 255, 255);
+    background-color: black;
+    border-radius: 50px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    z-index: 1;
+
+}
+    #run:hover{
+         background-color: #C3E0E5;
+         color: #000000;;
+         transform: scale(1.1)
+         
+
+}
+        code {
+            font-family: "Courier New", Courier, monospace;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+
+        pre {
+            font-family: "Courier New", Courier, monospace;
+            background-color: #2e2e2e;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto; 
+            overflow-y: auto; 
+            width: 540px;
+        }
+
+        .Header{
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100px;
+            width: 100%;
+            background-color: #274472;
+            border: 10px solid #111;
+            z-index: 2;
+            display: block;
+            justify-content: center;   
+            text-align: center;
+            min-width: 200px;
+            
+           
+            
+        }
+        #deadspace{
+          position: static;
+            left: 0;
+            top: 0;
+            height: 120px;
+            width: 100%;
+
+        }
+        .headertitle{
+          position: absolute;
+          left: 36%;
+          top: 10px ;
+          color: #f1f1f1;
+          width: fit-content;
+          
+        }
+
+        .sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  left: 50px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+  
+  
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  border: none;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  height: 100px;
+  z-index: 1;
+  
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+::-webkit-scrollbar {
+  width: 12px;  /* width of the scrollbar */
+  height: 12px; /* height of the scrollbar (horizontal scrollbar) */
+}
+
+/* The track (the part the thumb slides within) */
+::-webkit-scrollbar-track {
+  background: #000000;  /* light gray background */
+  border-radius: 10px;
+}
+
+/* The draggable part of the scrollbar */
+::-webkit-scrollbar-thumb {
+  background: #888;  /* color of the thumb */
+  border-radius: 10px;
+  height: 10px;
+}
+
+/* The thumb when you hover over it */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;  /* darker color when hovered */
+}
+
+/* Optional: Add styles for scrollbar corners */
+::-webkit-scrollbar-corner {
+  background: #f1f1f1;
+}
+
+
+    </style>
+
+
+
+
+
+
+
+
+
+
+    <script>
+        function openNav() {
+  document.getElementById("sidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("sidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+}
+
+function run(){
+  alert("False")
+}
+    </script>
+</body>
+</html>
+
